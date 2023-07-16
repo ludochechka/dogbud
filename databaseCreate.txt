@@ -1,0 +1,54 @@
+create table Owners ( 
+id int primary key auto_increment, 
+Name varchar (20), 
+Dog_id int not null, 
+Walking_hours varchar(30), 
+Adress_id int not null, 
+Phone_number varchar(15),  
+foreign key (Dog_id) references Dogs(Id), 
+foreign key (Adress_id) references Adress(Id)  
+);
+
+
+CREATE TABLE Breeds (  
+Breed_ID int primary key auto_increment,     
+Breed_name VARCHAR(40) default 'mixed' 
+);
+
+
+CREATE TABLE Adress (  
+ID int primary key auto_increment,     
+Coordinate_x int,  
+Coordinate_y int,  
+City VARCHAR(30) not null,  
+Street VARCHAR(40) not null,  
+House_number int,  
+Apartment_number int 
+);
+
+
+CREATE TABLE Dogs (     
+Id int primary key AUTO_INCREMENT,     
+Name VARCHAR(20) not null,     
+Breed_id int not null,     
+Age int,     
+Weight int,  
+Sex bool,  
+Is_altered bool,  
+Is_agressive bool,       
+CONSTRAINT dogs_age_chk CHECK(Age >0 AND Age<30),     
+FOREIGN KEY (Breed_id)  REFERENCES Breeds(Breed_ID)
+);
+
+Create table UserData(
+salt varchar(120),
+passwd varchar(120),
+login varchar(50) primary key
+);
+
+create table Users(
+login varchar(50) primary key,
+owner_id int,
+dog_id int,
+adress_id int
+);
