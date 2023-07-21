@@ -19,25 +19,25 @@ public class UserInfoFormDog extends JFrame{
 	public JTextField dnamef = new JTextField("");
 	
 	JLabel label2 = new JLabel("Порода собаки:");
-	public JTextField dbreedf = new JTextField("");//
+	public JTextField dbreedf = new JTextField("");
 	
-	JLabel label3 = new JLabel("Возраст собаки:");//
-	public JTextField dagef = new JTextField("");//
+	JLabel label3 = new JLabel("Возраст собаки:");
+	public JTextField dagef = new JTextField("");
 	
-	JLabel label4 = new JLabel("Вес собаки:");//
-	public JTextField dwghf = new JTextField("");//
+	JLabel label4 = new JLabel("Вес собаки:");
+	public JTextField dwghf = new JTextField("");
 	
-	JLabel label5 = new JLabel("Пол собаки:");//
-	public JRadioButton dsexfm = new JRadioButton("м");//
-	public JRadioButton dsexff = new JRadioButton("ж");//
+	JLabel label5 = new JLabel("Пол собаки:");
+	public JRadioButton dsexfm = new JRadioButton("м");
+	public JRadioButton dsexff = new JRadioButton("ж");
 	
-	JLabel label6 = new JLabel("Кастрирована/стерилизована ли собака?:");//
-	public JRadioButton daltfy = new JRadioButton("да");//
-	public JRadioButton daltfn = new JRadioButton("нет");//
+	JLabel label6 = new JLabel("Кастрирована/стерилизована ли собака?:");
+	public JRadioButton daltfy = new JRadioButton("да");
+	public JRadioButton daltfn = new JRadioButton("нет");
 	
-	JLabel label7 = new JLabel("Агрессивна ли собака?:");//
-	public JRadioButton dagrfy = new JRadioButton("да");//
-	public JRadioButton dagrfn = new JRadioButton("нт");//
+	JLabel label7 = new JLabel("Агрессивна ли собака?:");
+	public JRadioButton dagrfy = new JRadioButton("да");
+	public JRadioButton dagrfn = new JRadioButton("нет");
 	
 	public JButton btn = new JButton("Продолжить");
  
