@@ -10,19 +10,19 @@ import g.MainWdw.SigninBListener;
 
 public class Registrator extends JFrame{
 
-	JLabel label1 = new JLabel("Введите логин:");
+	JLabel label1 = new JLabel("Р’РІРµРґРёС‚Рµ Р»РѕРіРёРЅ:");
 	public JTextField logf = new JTextField("");
-	JLabel label2 = new JLabel("Введите пароль:");
+	JLabel label2 = new JLabel("Р’РІРµРґРёС‚Рµ РїР°СЂРѕР»СЊ:");
 	public JPasswordField pwdf = new JPasswordField("");
 	
-	public JButton btn = new JButton("Продолжить");
+	public JButton btn = new JButton("Р—Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°С‚СЊСЃСЏ!");
 	
 	User user;
 	
  
 	public Registrator()
 	{
-		super("Registration");
+		super("Р РµРіРёСЃС‚СЂР°С†РёСЏ");
 		user = new User();
 		this.setBounds(100,100,250,100);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -75,7 +75,7 @@ public class Registrator extends JFrame{
 			
 			if (d.isUserExist(log)) 
 			{
-				String s = "это имя пользователя занято";
+				String s = "Р­С‚С‚ Р»РѕРіРёРЅ Р·Р°РЅСЏС‚!";
 				JOptionPane.showMessageDialog(null,s,"!!!",JOptionPane.PLAIN_MESSAGE);
 			}
 			else 
@@ -85,12 +85,6 @@ public class Registrator extends JFrame{
 				UserInfoFormDog uif = new UserInfoFormDog(user);
 				uif.setVisible(true);
 			}
-			
-			
-			//ChooseWdw ch = new ChooseWdw(true);
-			///ch.setVisible(true);
 		}
-	}
-	
-	
+	}	
 }
