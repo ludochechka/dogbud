@@ -12,10 +12,10 @@ public class ChooseWdw extends JFrame{
 	
 	User user;
 	boolean isUser;
-	public JButton button1 = new JButton("Собаки");
-	public JButton button2 = new JButton("Хозяева");
-	public JButton button3 = new JButton("Адреса");
-	public JButton button4 = new JButton("Ближайшие собаки");
+	public JButton button1 = new JButton("РЎРѕР±Р°РєРё");
+	public JButton button2 = new JButton("РҐРѕР·СЏРµРІР°");
+	public JButton button3 = new JButton("РђРґСЂРµСЃР°");
+	public JButton button4 = new JButton("Р‘Р»РёР¶Р°Р№С€РёРµ СЃРѕР±Р°РєРё");
 	
 	public ChooseWdw(User uuser,boolean isU)
 	{
@@ -80,7 +80,7 @@ public class ChooseWdw extends JFrame{
 		public void actionPerformed(ActionEvent e)
 		{
 			if (!isUser) 
-				JOptionPane.showMessageDialog(null,"данная функция доступна только \nдля зарегистрированных пользователей","!!!",JOptionPane.PLAIN_MESSAGE);
+				JOptionPane.showMessageDialog(null,"РґР°РЅРЅР°СЏ С„СѓРЅРєС†РёСЏ РґРѕСЃС‚СѓРїРЅР° С‚РѕР»СЊРєРѕ \nРґР»СЏ Р·Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅРЅС‹С… РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№","!!!",JOptionPane.PLAIN_MESSAGE);
 			else
 			{
 				String message = "location";
@@ -92,6 +92,5 @@ public class ChooseWdw extends JFrame{
 			
 		}
 	}
-	
 	
 }
