@@ -257,9 +257,9 @@ public boolean AddPwd(String login, String pwd)
         int rows = statement.executeUpdate("INSERT userdata(salt, passwd, login) VALUES ('"+s+"','"+passwd+"','"+login+"');");
         
         System.out.println("data added to db \n");
-        System.out.println("you entered password " + passwd);
-        System.out.println("it's salt " + salt);
-        System.out.println("login " + login + '\n');
+        // System.out.println("you entered password " + passwd);
+        // System.out.println("it's salt " + salt);
+        // System.out.println("login " + login + '\n'); 
        
         
         return true;     
@@ -296,7 +296,7 @@ public String GetPwd(String login)
        pwd = resultSet.getString("passwd");
        
        System.out.println("data got from db \n");
-       System.out.println("you got passwd: " + pwd + " of " + login + " user\n");
+       //System.out.println("you got passwd: " + pwd + " of " + login + " user\n");
    
    	   
         return pwd;     
@@ -335,7 +335,7 @@ public String GetSalt(String login)
         
        
        System.out.println("data got from db \n");
-       System.out.println("you got salt: " + salt + " of " + login + "user\n");
+       //System.out.println("you got salt: " + salt + " of " + login + "user\n");
        return salt;     
 			 
 		} catch (SQLException e1) {
@@ -371,7 +371,7 @@ public Integer getUserId(String columnName, String query)
 		}
 
 	catch(Exception ex){
-	System.out.println("Connection while adding adress failed...");
+	System.out.println("Connection while getting userID failed...");
 	System.out.println(ex);
 	return ID;
 	}
@@ -399,7 +399,7 @@ public OwnerInfo getOwnerInfo(Integer ownerId)
 		}
 
 	catch(Exception ex){
-	System.out.println("Connection while adding adress failed...");
+	System.out.println("Connection while getting ownerinfo failed...");
 	System.out.println(ex);
 	return oi;
 	}
@@ -439,7 +439,7 @@ public DogInfo getDogInfo(Integer dogId)
 		}
 
 	catch(Exception ex){
-	System.out.println("Connection while adding adress failed...");
+	System.out.println("Connection while getting doginfo failed..");
 	System.out.println(ex);
 	return di;
 	}
@@ -468,7 +468,7 @@ public AdressInfo getAdressInfo(Integer adressId)
 		}
 
 	catch(Exception ex){
-	System.out.println("Connection while adding adress failed...");
+	System.out.println("Connection while getting adressinfo failed.....");
 	System.out.println(ex);
 	return ai;
 	}
