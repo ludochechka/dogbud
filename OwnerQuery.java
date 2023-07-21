@@ -28,19 +28,19 @@ public class OwnerQuery extends JFrame{
 
 
 	
-	JLabel label1 = new JLabel("Выбрать имя хозяина собаки по имени ");
-	public JTextField onamef = new JTextField("");
+	JLabel label1 = new JLabel("Р’С‹Р±СЂР°С‚СЊ РёРјСЏ С…РѕР·СЏРёРЅР° СЃРѕР±Р°РєРё РїРѕ РёРјРµРЅРё: ");
+	public JTextField onamef = new JTextField("");//С‚Рѕ РµСЃС‚СЊ РІРІРѕРґРёС‚СЃСЏ РёРјСЏ СЃРѕР±Р°РєРё Рё РїРѕР»СѓС‡Р°РµРј РґР°РЅРЅС‹Рµ Рѕ РµРµ С…РѕР·СЏРёРЅРµ
 	
-	JLabel label2 = new JLabel("Выбрать телефон хозяина собаки по имени  ");
+	JLabel label2 = new JLabel("Р’С‹Р±СЂР°С‚СЊ С‚РµР»РµС„РѕРЅРЅС‹Р№ РЅРѕРјРµСЂ С…РѕР·СЏРёРЅР° СЃРѕР±Р°РєРё РїРѕ РёРјРµРЅРё:  ");
 	public JTextField ophonef = new JTextField("");
 	
-	JLabel label3 = new JLabel("Выбрать часы прогулки собаки по имени ");
+	JLabel label3 = new JLabel("Р’С‹Р±СЂР°С‚СЊ С‡Р°СЃС‹ РїСЂРѕРіСѓР»РѕРє С…РѕР·СЏРёРЅР° СЃ СЃРѕР±Р°РєРѕР№ РїРѕ РёРјРµРЅРё: ");
 	public JTextField otimef = new JTextField("");
 	
 
-	public JButton btnName = new JButton("Продолжить");
-	public JButton btnPhone = new JButton("Продолжить");
-	public JButton btnTime = new JButton("Продолжить");
+	public JButton btnName = new JButton("РџСЂРѕРґРѕР»Р¶РёС‚СЊ");
+	public JButton btnPhone = new JButton("РџСЂРѕРґРѕР»Р¶РёС‚СЊ");
+	public JButton btnTime = new JButton("РџСЂРѕРґРѕР»Р¶РёС‚СЊ");
 	
  
 	public OwnerQuery()
@@ -99,17 +99,16 @@ public class OwnerQuery extends JFrame{
 			try {
 				
 				ArrayList<String> arr1  = d.Query("name", "select owners.name from dogs,owners "
-						+ "where (dogs.id = owners.dog_id and dogs.name = '"+name+"');");
-				if (arr1.isEmpty()) JOptionPane.showMessageDialog(null,"нет собак с таким именем!","!!!" + name +':',JOptionPane.PLAIN_MESSAGE);
+						                           + "where (dogs.id = owners.dog_id and dogs.name = '"+name+"');");
+				if (arr1.isEmpty()) JOptionPane.showMessageDialog(null,"РЅРµС‚ СЃРѕР±Р°Рє СЃ С‚Р°РєРёРј РёРјРµРЅРµРј!","!!!" + name +':',JOptionPane.PLAIN_MESSAGE);
 				String res = "";
 				for (String s:arr1)
 				{
 					res+=s;
 					res+='\n';
 				}
-				JOptionPane.showMessageDialog(null,res,"Имя хозяина собаки " + name +':',JOptionPane.PLAIN_MESSAGE);
+				JOptionPane.showMessageDialog(null,res,"РРјСЏ С…РѕР·СЏРёРЅР° СЃРѕР±Р°РєРё " + name +':',JOptionPane.PLAIN_MESSAGE);
 			} catch (SQLException e1) {
-				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 			
@@ -127,17 +126,16 @@ public class OwnerQuery extends JFrame{
 			try {
 				
 				ArrayList<String> arr1  = d.Query("phone_number", "select owners.phone_number from dogs,owners "
-						+ "where (dogs.id = owners.dog_id and dogs.name = '"+name+"');");
-				if (arr1.isEmpty()) JOptionPane.showMessageDialog(null,"нет собак с таким именем!","!!!" + name +':',JOptionPane.PLAIN_MESSAGE);
+						                                   + "where (dogs.id = owners.dog_id and dogs.name = '"+name+"');");
+				if (arr1.isEmpty()) JOptionPane.showMessageDialog(null,"РЅРµС‚ СЃРѕР±Р°Рє СЃ С‚Р°РєРёРј РёРјРµРЅРµРј!","!!!" + name +':',JOptionPane.PLAIN_MESSAGE);
 				String res = "";
 				for (String s:arr1)
 				{
 					res+=s;
 					res+='\n';
 				}
-				JOptionPane.showMessageDialog(null,res,"номер хозяина собаки " + name +':',JOptionPane.PLAIN_MESSAGE);
+				JOptionPane.showMessageDialog(null,res,"РќРѕРјРµСЂ С…РѕР·СЏРёРЅР° СЃРѕР±Р°РєРё " + name +':',JOptionPane.PLAIN_MESSAGE);
 			} catch (SQLException e1) {
-				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 				
@@ -156,17 +154,16 @@ public class OwnerQuery extends JFrame{
 			try {
 				
 				ArrayList<String> arr1  = d.Query("walking_hours", "select owners.walking_hours from dogs,owners "
-						+ "where (dogs.id = owners.dog_id and dogs.name = '"+name+"');");
-				if (arr1.isEmpty()) JOptionPane.showMessageDialog(null,"нет собак с таким именем!","!!!" + name +':',JOptionPane.PLAIN_MESSAGE);
+						                                    + "where (dogs.id = owners.dog_id and dogs.name = '"+name+"');");
+				if (arr1.isEmpty()) JOptionPane.showMessageDialog(null,"РЅРµС‚ СЃРѕР±Р°Рє СЃ С‚Р°РєРёРј РёРјРµРЅРµРј!!","!!!" + name +':',JOptionPane.PLAIN_MESSAGE);
 				String res = "";
 				for (String s:arr1)
 				{
 					res+=s;
 					res+='\n';
 				}
-				JOptionPane.showMessageDialog(null,res,"прогулки хозяина собаки" + name +':',JOptionPane.PLAIN_MESSAGE);
+				JOptionPane.showMessageDialog(null,res,"Р§Р°СЃС‹ РїСЂРѕРіСѓР»РѕРє СЃРѕР±Р°РєРё" + name +':',JOptionPane.PLAIN_MESSAGE);
 			} catch (SQLException e1) {
-				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 			
