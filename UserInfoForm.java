@@ -16,19 +16,19 @@ public class UserInfoForm extends JFrame{
 	
 	Integer dogID, adrID;
 	
-	JLabel label1 = new JLabel("ФИО:");
+	JLabel label1 = new JLabel("РРјСЏ:");
 	public JTextField namef = new JTextField("");
 	
 	
-	JLabel label2 = new JLabel("телефон:");
+	JLabel label2 = new JLabel("РўРµР»РµС„РѕРЅРЅС‹Р№ РЅРѕРјРµСЂ:");
 	public JTextField phonef = new JTextField("");
 	
 	
-	JLabel label3 = new JLabel("Часы прогулок с собакой:");
+	JLabel label3 = new JLabel("Р’СЂРµРјСЏ РїСЂРѕРіСѓР»РѕРє:");
 	public JTextField timef = new JTextField("");
 	
 
-	public JButton btn = new JButton("Продолжить");
+	public JButton btn = new JButton("РџСЂРѕРґРѕР»Р¶РёС‚СЊ");
 	
  
 	public UserInfoForm(User uuser, Integer Dogid, Integer Adrid)
@@ -44,19 +44,9 @@ public class UserInfoForm extends JFrame{
 		Container container = this.getContentPane();
 		container.setLayout(new GridLayout(3,2,2,2));;
 		
-		
-		
-	        
-	        
-		//namef.setMaximumSize(getMaximumSize());
-		//container.add(label1);
 		namef.addActionListener(new NameListener());
-		//container.add(label2);
-	    phonef.addActionListener(new PhoneListener());
-		
-		//container.add(label3);
+	    	phonef.addActionListener(new PhoneListener());
 		timef.addActionListener(new TimeListener());
-		
 
 		btn.addActionListener(new BtnListener());
 		 
@@ -78,11 +68,6 @@ public class UserInfoForm extends JFrame{
 		panel3.add(timef); 
 	    container.add(panel3);
 		
-		//container.add(namef);
-		//container.add(phonef);
-		//container.add(timef);
-		
-	
 		
 		container.add(btn);
 		
@@ -127,16 +112,13 @@ public class UserInfoForm extends JFrame{
 		public void actionPerformed(ActionEvent e)
 		{
 			
-			//String nameEncrypted = "";
-			//Encryptor enc = new Encryptor(namef.getText());
-			//nameEncrypted = enc.encrypt();
 			oi.setOname(namef.getText());
 			oi.setOphone(phonef.getText());
 			oi.setOtime(timef.getText());
 			
 			user.setOi(oi);
 			
-			JOptionPane.showMessageDialog(null,user.toString(),"вы зарегистрировали пользователя:",JOptionPane.PLAIN_MESSAGE);
+			JOptionPane.showMessageDialog(null,user.toString(),"РІС‹ Р·Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°Р»Рё РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ!:",JOptionPane.PLAIN_MESSAGE);
 			
 			DB1 d = new DB1();
 			Integer oid = d.AddUserDataOwner(oi, dogID, adrID);
