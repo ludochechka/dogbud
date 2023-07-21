@@ -9,40 +9,39 @@ import java.util.ArrayList;
 public class DogQuery extends JFrame{
 
 
-		
-		JLabel label1 = new JLabel("Выбрать собак возраста ");
+		JLabel label1 = new JLabel("Р’С‹Р±СЂР°С‚СЊ СЃРѕР±Р°Рє РІРѕР·СЂР°СЃС‚Р° ");
 		public JTextField dagef = new JTextField("");
-		public JRadioButton dagel = new JRadioButton("меньше");//
-		public JRadioButton dagem = new JRadioButton("больше");//
-		public JRadioButton dagee = new JRadioButton("равного");//
+		public JRadioButton dagel = new JRadioButton("РјРµРЅСЊС€Рµ");
+		public JRadioButton dagem = new JRadioButton("Р±РѕР»СЊС€Рµ");
+		public JRadioButton dagee = new JRadioButton("СЂР°РІРЅРѕРіРѕ");
 		
-		JLabel label2 = new JLabel("Выбрать собак породы ");
+		JLabel label2 = new JLabel("Р’С‹Р±СЂР°С‚СЊ СЃРѕР±Р°Рє РїРѕСЂРѕРґС‹ ");
 		public JTextField dbreedf = new JTextField("");
 		
-		JLabel label3 = new JLabel("Выбрать собак веса ");
+		JLabel label3 = new JLabel("Р’С‹Р±СЂР°С‚СЊ СЃРѕР±Р°Рє РІРµСЃР° ");
 		public JTextField dwghf = new JTextField("");
-		public JRadioButton dwghl = new JRadioButton("меньше");//
-		public JRadioButton dwghm = new JRadioButton("больше");//
-		public JRadioButton dwghe = new JRadioButton("равного");//
+		public JRadioButton dwghl = new JRadioButton("РјРµРЅСЊС€Рµ");
+		public JRadioButton dwghm = new JRadioButton("Р±РѕР»СЊС€Рµ");
+		public JRadioButton dwghe = new JRadioButton("СЂР°РІРЅРѕРіРѕ");
 		
-		JLabel label4 = new JLabel("Выбрать собак пола ");//
-		public JRadioButton dsexfm = new JRadioButton("м");//
-		public JRadioButton dsexff = new JRadioButton("ж");//
+		JLabel label4 = new JLabel("Р’С‹Р±СЂР°С‚СЊ СЃРѕР±Р°Рє РїРѕР»Р° ");
+		public JRadioButton dsexfm = new JRadioButton("Рј");
+		public JRadioButton dsexff = new JRadioButton("Р¶");
 		
-		JLabel label5 = new JLabel("Выбрать собак ");//
-		public JRadioButton daltfy = new JRadioButton("стерильных");//
-		public JRadioButton daltfn = new JRadioButton("фертильных");//
+		JLabel label5 = new JLabel("Р’С‹Р±СЂР°С‚СЊ СЃРѕР±Р°Рє ");
+		public JRadioButton daltfy = new JRadioButton("СЃС‚РµСЂРёР»СЊРЅС‹С…");
+		public JRadioButton daltfn = new JRadioButton("С„РµСЂС‚РёР»СЊРЅС‹С…");
 		
-		JLabel label6 = new JLabel("Выбрать собак ");//
-		public JRadioButton dagrfy = new JRadioButton("агрессивных");//
-		public JRadioButton dagrfn = new JRadioButton("неагрессивных");//
+		JLabel label6 = new JLabel("Р’С‹Р±СЂР°С‚СЊ СЃРѕР±Р°Рє ");
+		public JRadioButton dagrfy = new JRadioButton("Р°РіСЂРµСЃСЃРёРІРЅС‹С…");
+		public JRadioButton dagrfn = new JRadioButton("РЅРµР°РіСЂРµСЃСЃРёРІРЅС‹С…");
 		
-		public JButton btnAge = new JButton("Продолжить");
-		public JButton btnBreed = new JButton("Продолжить");
-		public JButton btnWeight = new JButton("Продолжить");
-		public JButton btnSex = new JButton("Продолжить");
-		public JButton btnAgr = new JButton("Продолжить");
-		public JButton btnAlt = new JButton("Продолжить");
+		public JButton btnAge = new JButton("РџСЂРѕРґРѕР»Р¶РёС‚СЊ");
+		public JButton btnBreed = new JButton("РџСЂРѕРґРѕР»Р¶РёС‚СЊ");
+		public JButton btnWeight = new JButton("РџСЂРѕРґРѕР»Р¶РёС‚СЊ");
+		public JButton btnSex = new JButton("РџСЂРѕРґРѕР»Р¶РёС‚СЊ");
+		public JButton btnAgr = new JButton("РџСЂРѕРґРѕР»Р¶РёС‚СЊ");
+		public JButton btnAlt = new JButton("РџСЂРѕРґРѕР»Р¶РёС‚СЊ");
 		
 	 
 		public DogQuery()
@@ -150,8 +149,6 @@ public class DogQuery extends JFrame{
 			panel7.add(btnAgr);
 		  	container.add(panel7);
 		  	
-
-			
 		}
 		
 
@@ -172,7 +169,9 @@ public class DogQuery extends JFrame{
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				
+				String message = "";
+				message+=new String(dagef.getText());
+				System.out.println(message);
 			}
 		}
 		
@@ -193,8 +192,8 @@ public class DogQuery extends JFrame{
 			{
 				String message = "";
 				Boolean isS = dsexfm.isSelected();
-				if (isS == false) message = "м";
-					else message = "ж";
+				if (isS == false) message = "Рј";
+					else message = "Р¶";
 				System.out.println(message);
 			
 			}
@@ -206,8 +205,8 @@ public class DogQuery extends JFrame{
 			{
 				String message = "";
 				Boolean isS = daltfy.isSelected();
-				if (isS == false) message = "стерилен";
-					else message = "нестерилен";
+				if (isS == false) message = "СЃС‚РµСЂРёР»РµРЅ";
+					else message = "РЅРµСЃС‚РµСЂРёР»РµРЅ";
 				System.out.println(message);
 				
 			}
@@ -219,8 +218,8 @@ public class DogQuery extends JFrame{
 			{
 			 	String message = "";
 				Boolean isS = dagrfy.isSelected();
-				if (isS == false) message = "агрессивен";
-					else message = "неагрессивен";
+				if (isS == false) message = "Р°РіСЂРµСЃСЃРёРІРµРЅ";
+					else message = "РЅРµР°РіСЂРµСЃСЃРёРІРµРЅ";
 				System.out.println(message);
 			
 			}
@@ -244,7 +243,7 @@ public class DogQuery extends JFrame{
 						res+=s;
 						res+='\n';
 					}
-					JOptionPane.showMessageDialog(null,res,"Имена собак возраста " + symbol + ' '+val+':',JOptionPane.PLAIN_MESSAGE);
+					JOptionPane.showMessageDialog(null,res,"РРјРµРЅР° СЃРѕР±Р°Рє РІРѕР·СЂР°СЃС‚Р° " + symbol + ' '+val+':',JOptionPane.PLAIN_MESSAGE);
 				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -264,7 +263,7 @@ public class DogQuery extends JFrame{
 				try {
 					Integer bid = -1;
 					ArrayList<String> arr = d.Query("breed_id", "select * from breeds where (breed_name = '" + breed +"');");
-					if (arr.isEmpty()) JOptionPane.showMessageDialog(null,"в базе нет такой породы собак","!!!",JOptionPane.PLAIN_MESSAGE); 
+					if (arr.isEmpty()) JOptionPane.showMessageDialog(null,"РІ Р±Р°Р·Рµ РЅРµС‚ С‚Р°РєРѕР№ РїРѕСЂРѕРґС‹ СЃРѕР±Р°Рє","!!!",JOptionPane.PLAIN_MESSAGE); 
 					else
 					{
 						bid = Integer.valueOf(arr.get(0));
@@ -275,7 +274,7 @@ public class DogQuery extends JFrame{
 							res+=s;
 							res+='\n';
 						}
-						JOptionPane.showMessageDialog(null,res,"Имена собак породы " + breed +':',JOptionPane.PLAIN_MESSAGE);
+						JOptionPane.showMessageDialog(null,res,"РРјРµРЅР° СЃРѕР±Р°Рє РїРѕСЂРѕРґС‹ " + breed +':',JOptionPane.PLAIN_MESSAGE);
 					}
 				
 				} catch (SQLException e1) {
@@ -304,7 +303,7 @@ public class DogQuery extends JFrame{
 						res+=s;
 						res+='\n';
 					}
-					JOptionPane.showMessageDialog(null,res,"Имена собак массой " + symbol + ' '+val+':',JOptionPane.PLAIN_MESSAGE);
+					JOptionPane.showMessageDialog(null,res,"РРјРµРЅР° СЃРѕР±Р°Рє РјР°СЃСЃРѕР№ " + symbol + ' '+val+':',JOptionPane.PLAIN_MESSAGE);
 				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -331,9 +330,9 @@ public class DogQuery extends JFrame{
 						res+='\n';
 					}
 					String sex = "";
-					if (symbol == 0) sex+="женского";
-					else sex+="мужского";
-					JOptionPane.showMessageDialog(null,res,"Имена собак " + sex + " пола:",JOptionPane.PLAIN_MESSAGE);
+					if (symbol == 0) sex+="Р¶РµРЅСЃРєРѕРіРѕ";
+					else sex+="РјСѓР¶СЃРєРѕРіРѕ";
+					JOptionPane.showMessageDialog(null,res,"РРјРµРЅР° СЃРѕР±Р°Рє " + sex + " РїРѕР»Р°:",JOptionPane.PLAIN_MESSAGE);
 				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -360,8 +359,8 @@ public class DogQuery extends JFrame{
 						res+='\n';
 					}
 					String alt = "";
-					if (symbol == 0) alt+="не";
-					JOptionPane.showMessageDialog(null,res,"Имена собак " + alt + "кастрированных: ",JOptionPane.PLAIN_MESSAGE);
+					if (symbol == 0) alt+="РЅРµ";
+					JOptionPane.showMessageDialog(null,res,"РРјРµРЅР° СЃРѕР±Р°Рє " + alt + "РєР°СЃС‚СЂРёСЂРѕРІР°РЅРЅС‹С…: ",JOptionPane.PLAIN_MESSAGE);
 				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -388,8 +387,8 @@ public class DogQuery extends JFrame{
 						res+='\n';
 					}
 					String alt = "";
-					if (symbol == 0) alt+="не";
-					JOptionPane.showMessageDialog(null,res,"Имена собак " + alt + "агрессивных: ",JOptionPane.PLAIN_MESSAGE);
+					if (symbol == 0) alt+="РЅРµ";
+					JOptionPane.showMessageDialog(null,res,"РРјРµРЅР° СЃРѕР±Р°Рє " + alt + "Р°РіСЂРµСЃСЃРёРІРЅС‹С…: ",JOptionPane.PLAIN_MESSAGE);
 				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
