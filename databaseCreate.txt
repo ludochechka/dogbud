@@ -1,3 +1,5 @@
+--это скрипты для создания таблиц бд
+
 create table Owners ( 
 id int primary key auto_increment, 
 Name varchar (20), 
