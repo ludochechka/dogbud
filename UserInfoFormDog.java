@@ -18,31 +18,31 @@ public class UserInfoFormDog extends JFrame{
 	User user;
 
 	
-	JLabel label1 = new JLabel("Имя собаки:");
+	JLabel label1 = new JLabel("РРјСЏ СЃРѕР±Р°РєРёГЁ:");
 	public JTextField dnamef = new JTextField("");
 	
-	JLabel label2 = new JLabel("Порода собаки:");
+	JLabel label2 = new JLabel("РџРѕСЂРѕРґР° СЃРѕР±Р°РєРё:");
 	public JTextField dbreedf = new JTextField("");//
 	
-	JLabel label3 = new JLabel("Возраст собаки:");//
+	JLabel label3 = new JLabel("Р’РѕР·СЂР°СЃС‚ СЃРѕР±Р°РєРё:");//
 	public JTextField dagef = new JTextField("");//
 	
-	JLabel label4 = new JLabel("Вес собаки:");//
+	JLabel label4 = new JLabel("Р’РµСЃ СЃРѕР±Р°РєРё:");//
 	public JTextField dwghf = new JTextField("");//
 	
-	JLabel label5 = new JLabel("Пол собаки:");//
-	public JRadioButton dsexfm = new JRadioButton("м");//
-	public JRadioButton dsexff = new JRadioButton("ж");//
+	JLabel label5 = new JLabel("РџРѕР» СЃРѕР±Р°РєРё:");//
+	public JRadioButton dsexfm = new JRadioButton("Рј");//
+	public JRadioButton dsexff = new JRadioButton("Р¶");//
 	
-	JLabel label6 = new JLabel("Кастрирована/стерилизована ли собака?:");//
-	public JRadioButton daltfy = new JRadioButton("да");//
-	public JRadioButton daltfn = new JRadioButton("нет");//
+	JLabel label6 = new JLabel("РљР°СЃС‚СЂРёСЂРѕРІР°РЅР°/СЃС‚РµСЂРёР»РёР·РѕРІР°РЅР° Р»Рё СЃРѕР±Р°РєР°?:");//
+	public JRadioButton daltfy = new JRadioButton("РґР°");//
+	public JRadioButton daltfn = new JRadioButton("РЅРµС‚");//
 	
-	JLabel label7 = new JLabel("Агрессивна ли собака?:");//
-	public JRadioButton dagrfy = new JRadioButton("да");//
-	public JRadioButton dagrfn = new JRadioButton("нет");//
+	JLabel label7 = new JLabel("РђРіСЂРµСЃСЃРёРІРЅР° Р»Рё СЃРѕР±Р°РєР°?:");//
+	public JRadioButton dagrfy = new JRadioButton("РґР°");//
+	public JRadioButton dagrfn = new JRadioButton("РЅС‚");//
 	
-	public JButton btn = new JButton("Продолжить");
+	public JButton btn = new JButton("РџСЂРѕРґРѕР»Р¶РёС‚СЊ");
 	
  
 	public UserInfoFormDog(User uuser)
@@ -188,8 +188,8 @@ public class UserInfoFormDog extends JFrame{
 		{
 			String message = "";
 			Boolean isS = dsexfm.isSelected();
-			if (isS == false) message = "м";
-				else message = "ж";
+			if (isS == false) message = "Рј";
+				else message = "Р¶";
 			System.out.println(message);
 			di.setDsex(isS);
 		}
@@ -201,8 +201,8 @@ public class UserInfoFormDog extends JFrame{
 		{
 			String message = "";
 			Boolean isS = daltfy.isSelected();
-			if (isS == false) message = "стерилен";
-				else message = "нестерилен";
+			if (isS == false) message = "СЃС‚РµСЂРёР»РµРЅ";
+				else message = "РЅРµСЃС‚РµСЂРёР»РµРЅ";
 			System.out.println(message);
 			di.setDalt(isS);
 		}
@@ -214,8 +214,8 @@ public class UserInfoFormDog extends JFrame{
 		{
 		 	String message = "";
 			Boolean isS = dagrfy.isSelected();
-			if (isS == false) message = "агрессивен";
-				else message = "неагрессивен";
+			if (isS == false) message = "Р°РіСЂРµСЃСЃРёРІРµРЅ";
+				else message = "РЅРµР°РіСЂРµСЃСЃРёРІРµРЅ";
 			System.out.println(message);
 			di.setDagr(isS);
 		}
