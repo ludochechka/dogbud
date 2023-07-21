@@ -16,12 +16,12 @@ public class Autentificator extends JFrame{
 
 	
 
-	JLabel label1 = new JLabel("Введите логин:");
+	JLabel label1 = new JLabel("Р’РІРµРґРёС‚Рµ Р»РѕРіРёРЅ:");
 	public JTextField logf = new JTextField("");
-	JLabel label2 = new JLabel("Введите пароль:");
+	JLabel label2 = new JLabel("Р’РІРµРґРёС‚Рµ РїР°СЂРѕР»СЊ:");
 	public JPasswordField pwdf = new JPasswordField("");
 	
-	public JButton btn = new JButton("Продолжить");
+	public JButton btn = new JButton("РџСЂРѕРґРѕР»Р¶РёС‚СЊ");
 
 	public Autentificator()
 	{
@@ -80,13 +80,13 @@ public class Autentificator extends JFrame{
 			
 			Hasher h = new Hasher();
 		    String pwdSalted  = h.HashWithSalt(pwd, salt);
-		    System.out.println("you entered password and salted it:" + pwdSalted + "\n");
+		    //System.out.println("you entered password and salted it:" + pwdSalted + "\n");
 		    
 			if (d.isUserExist(log))
 			{
 				if (!pwdS.equals(pwdSalted)) 
 					{
-					String s = "неверный логин или пароль!";
+					String s = "РЅРµРІРµСЂРЅС‹Р№ Р»РѕРіРёРЅ РёР»Рё РїР°СЂРѕР»СЊ!";
 					JOptionPane.showMessageDialog(null,s,"!!!",JOptionPane.PLAIN_MESSAGE);
 					}
 				else 
@@ -105,14 +105,14 @@ public class Autentificator extends JFrame{
 					user.setDi(di);
 					user.setOi(oi);
 					
-					JOptionPane.showMessageDialog(null,user.toString(),"вы вошли под пользователем:",JOptionPane.PLAIN_MESSAGE);
+					JOptionPane.showMessageDialog(null,user.toString(),"РІС‹ РІРѕС€Р»Рё РїРѕРґ РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј:",JOptionPane.PLAIN_MESSAGE);
 					ChooseWdw ch = new ChooseWdw(user,true);///!!!
 					ch.setVisible(true);
 					}
 			}
 			else 
 			{
-				String s = "нет такого пользователя!";
+				String s = "РЅРµС‚ С‚Р°РєРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ!";
 				JOptionPane.showMessageDialog(null,s,"!!!",JOptionPane.PLAIN_MESSAGE);
 			}
 		}
