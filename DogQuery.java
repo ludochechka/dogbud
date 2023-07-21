@@ -9,11 +9,12 @@ import java.util.ArrayList;
 public class DogQuery extends JFrame{
 
 
+		
 		JLabel label1 = new JLabel("Выбрать собак возраста ");
 		public JTextField dagef = new JTextField("");
-		public JRadioButton dagel = new JRadioButton("меньше");
-		public JRadioButton dagem = new JRadioButton("больше");
-		public JRadioButton dagee = new JRadioButton("равного");
+		public JRadioButton dagel = new JRadioButton("меньше");//
+		public JRadioButton dagem = new JRadioButton("больше");//
+		public JRadioButton dagee = new JRadioButton("равного");//
 		
 		JLabel label2 = new JLabel("Выбрать собак породы ");
 		public JTextField dbreedf = new JTextField("");
@@ -23,7 +24,7 @@ public class DogQuery extends JFrame{
 		public JRadioButton dwghl = new JRadioButton("меньше");
 		public JRadioButton dwghm = new JRadioButton("больше");
 		public JRadioButton dwghe = new JRadioButton("равного");
-		
+	
 		JLabel label4 = new JLabel("Выбрать собак пола ");
 		public JRadioButton dsexfm = new JRadioButton("м");
 		public JRadioButton dsexff = new JRadioButton("ж");
@@ -32,7 +33,7 @@ public class DogQuery extends JFrame{
 		public JRadioButton daltfy = new JRadioButton("стерильных");
 		public JRadioButton daltfn = new JRadioButton("фертильных");
 		
-		JLabel label6 = new JLabel("Выбрать собак ");
+		JLabel label6 = new JLabel("Выбрать собак ");//
 		public JRadioButton dagrfy = new JRadioButton("агрессивных");
 		public JRadioButton dagrfn = new JRadioButton("неагрессивных");
 		
@@ -149,6 +150,8 @@ public class DogQuery extends JFrame{
 			panel7.add(btnAgr);
 		  	container.add(panel7);
 		  	
+
+			
 		}
 		
 
@@ -245,7 +248,6 @@ public class DogQuery extends JFrame{
 					}
 					JOptionPane.showMessageDialog(null,res,"Имена собак возраста " + symbol + ' '+val+':',JOptionPane.PLAIN_MESSAGE);
 				} catch (SQLException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 				
@@ -278,7 +280,6 @@ public class DogQuery extends JFrame{
 					}
 				
 				} catch (SQLException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 			
@@ -305,7 +306,6 @@ public class DogQuery extends JFrame{
 					}
 					JOptionPane.showMessageDialog(null,res,"Имена собак массой " + symbol + ' '+val+':',JOptionPane.PLAIN_MESSAGE);
 				} catch (SQLException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 				
@@ -334,7 +334,6 @@ public class DogQuery extends JFrame{
 					else sex+="мужского";
 					JOptionPane.showMessageDialog(null,res,"Имена собак " + sex + " пола:",JOptionPane.PLAIN_MESSAGE);
 				} catch (SQLException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 				
@@ -362,7 +361,6 @@ public class DogQuery extends JFrame{
 					if (symbol == 0) alt+="не";
 					JOptionPane.showMessageDialog(null,res,"Имена собак " + alt + "кастрированных: ",JOptionPane.PLAIN_MESSAGE);
 				} catch (SQLException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 				
@@ -390,11 +388,9 @@ public class DogQuery extends JFrame{
 					if (symbol == 0) alt+="не";
 					JOptionPane.showMessageDialog(null,res,"Имена собак " + alt + "агрессивных: ",JOptionPane.PLAIN_MESSAGE);
 				} catch (SQLException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 		}
 		}
-		
 		
 	}
