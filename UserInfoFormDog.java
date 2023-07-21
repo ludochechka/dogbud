@@ -11,12 +11,9 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class UserInfoFormDog extends JFrame{
-
-	
 	
 	DogInfo di;
 	User user;
-
 	
 	JLabel label1 = new JLabel("Имя собакиè:");
 	public JTextField dnamef = new JTextField("");
@@ -43,7 +40,6 @@ public class UserInfoFormDog extends JFrame{
 	public JRadioButton dagrfn = new JRadioButton("нт");//
 	
 	public JButton btn = new JButton("Продолжить");
-	
  
 	public UserInfoFormDog(User uuser)
 	{
@@ -85,7 +81,6 @@ public class UserInfoFormDog extends JFrame{
 		dagrfy.addActionListener(new DAgrListener());
 		
 		btn.addActionListener(new BtnListener());
-
 		
 		JPanel panel1 = new JPanel();
 		panel1.setLayout(new BoxLayout(panel1, BoxLayout.PAGE_AXIS));
@@ -131,8 +126,7 @@ public class UserInfoFormDog extends JFrame{
 	  	panel7.add(dagrfy); 
 	  	panel7.add(dagrfn);
 	  	container.add(panel7);
-	  	
-
+		
 		container.add(btn);
 		
 	}
