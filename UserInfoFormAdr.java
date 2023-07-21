@@ -18,23 +18,23 @@ public class UserInfoFormAdr extends JFrame{
 	User user;
 	Integer DogID;
 	
-	JLabel label1 = new JLabel("Город:");
+	JLabel label1 = new JLabel("Р“РѕСЂРѕРґ:");
 	public JTextField cityf = new JTextField("");
-	JLabel label2 = new JLabel("Улица:");
+	JLabel label2 = new JLabel("РЈР»РёС†Р°:");
 	public JTextField streetf = new JTextField("");
-	JLabel label3 = new JLabel("Дом:");
+	JLabel label3 = new JLabel("Р”РѕРј:");
 	public JTextField hsf = new JTextField("");
-	JLabel label4 = new JLabel("Квартира:");
+	JLabel label4 = new JLabel("РљРІР°СЂС‚РёСЂР°:");
 	public JTextField aptf = new JTextField("");
 	
-	JLabel label5 = new JLabel("Координата х:");
+	JLabel label5 = new JLabel("РљРѕРѕСЂРґРёРЅР°С‚Р° РҐ:");
 	public JTextField xf = new JTextField("");
-	JLabel label6 = new JLabel("Координата у:");
+	JLabel label6 = new JLabel("РљРѕРѕСЂРґРёРЅР°С‚Р° РЈ:");
 	public JTextField yf = new JTextField("");
 	
 	
 	
-	public JButton btn = new JButton("Продолжить");
+	public JButton btn = new JButton("РџСЂРѕРґРѕР»Р¶РёС‚СЊ");
 	
  
 	public UserInfoFormAdr(User uuser, Integer dogID)
@@ -49,16 +49,10 @@ public class UserInfoFormAdr extends JFrame{
 		Container container = this.getContentPane();
 		container.setLayout(new GridLayout(3,2,2,2));
 		
-		
-		
-		
-		
-		
 		cityf.addActionListener(new CityListener());
 		streetf.addActionListener(new StreetListener());
 		hsf.addActionListener(new HouseListener());
 		aptf.addActionListener(new AppartmentListener());
-
 		
 		btn.addActionListener(new BtnListener());
 
@@ -94,7 +88,6 @@ public class UserInfoFormAdr extends JFrame{
 	  	panel5.add(yf);
 	  	container.add(panel5);
 
-		
 		container.add(btn);
 		
 	}
@@ -147,9 +140,7 @@ public class UserInfoFormAdr extends JFrame{
 	class BtnListener implements ActionListener
 	{
 		public void actionPerformed(ActionEvent e)
-		{
-			
-			
+		{			
 			ai.setAcity(cityf.getText());
 			ai.setAstreet(streetf.getText());
 			ai.setAhouse(aptf.getText());
@@ -158,7 +149,6 @@ public class UserInfoFormAdr extends JFrame{
 			ai.setAy(yf.getText());
 			
 			DB1 d = new DB1();
-			
 			
 			Integer adrID = d.AddUserDataAdress(ai);
 			user.setAi(ai);
