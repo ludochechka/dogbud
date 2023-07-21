@@ -19,14 +19,12 @@ import g.AdressQuery.btnAdrListener;
 
 public class LocationQuery extends JFrame{
 
-
-	JLabel label1 = new JLabel("Вывести имена всех собак, живущих не далее чем ");
+	JLabel label1 = new JLabel("Р’С‹РІРµСЃС‚Рё РёРјРµРЅР° РІСЃРµС… СЃРѕР±Р°Рє, Р¶РёРІСѓС‰РёС… РѕС‚ РІР°СЃ РЅРµ РґР°Р»РµРµ С‡РµРј ");
 	public JTextField dlocf = new JTextField("");
 	User U = new User();
 	
-	public JButton btnLoc = new JButton("Продолжить");
+	public JButton btnLoc = new JButton("РџСЂРѕРґРѕР»Р¶РёС‚СЊ");
 	
- 
 	public LocationQuery(User user)
 	{
 		super("DogBud");
@@ -38,18 +36,12 @@ public class LocationQuery extends JFrame{
 	
 		btnLoc.addActionListener(new btnLocListener());
 		
-
-		 
-		
-		
-	    JPanel panel1 = new JPanel();
+	    	JPanel panel1 = new JPanel();
 		panel1.setLayout(new BoxLayout(panel1, BoxLayout.PAGE_AXIS));
 		panel1.add(label1);
 		panel1.add(dlocf); 
 		panel1.add(btnLoc); 
 		container.add(panel1);
-	 
-	  	
 
 	}
 	
@@ -58,7 +50,7 @@ public class LocationQuery extends JFrame{
 		public void actionPerformed(ActionEvent e)
 		{
 			Integer distance = Integer.valueOf(dlocf.getText());
-			if (distance < 0) JOptionPane.showMessageDialog(null,"расстояние не может быть < 0 км","!!!",JOptionPane.PLAIN_MESSAGE);
+			if (distance < 0) JOptionPane.showMessageDialog(null,"Р Р°СЃСЃС‚РѕСЏРЅРёРµ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ < 0 РєРј!","!!!",JOptionPane.PLAIN_MESSAGE);
 			else
 			{
 				DB1 d = new DB1();
@@ -73,9 +65,7 @@ public class LocationQuery extends JFrame{
 														+ "pow(adress.coordinate_y - " + Y + ",2)) < " + distance + ");");
 
 					
-					
-					
-					String names = "список собак, чьи хозяева живут\n не далее чем "+distance+" км от вас:\n\n";
+					String names = "СЃРїРёСЃРѕРє СЃРѕР±Р°Рє, С‡СЊРё С…РѕР·СЏРµРІР° Р¶РёРІСѓС‚\n РЅРµ РґР°Р»РµРµ С‡РµРј "+distance+" РєРј РѕС‚ РІР°СЃ:\n\n";
 					for (String s:arr)
 					{
 						names+=s;
@@ -83,16 +73,11 @@ public class LocationQuery extends JFrame{
 					}
 					JOptionPane.showMessageDialog(null,names,"!!!",JOptionPane.PLAIN_MESSAGE);
 				} catch (SQLException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				} 
 			}
-			
-			
-			
 		}
 	}
-	
 }
 
 
