@@ -28,11 +28,11 @@ import g.DogQuery.DWeightListener;
 public class AdressQuery extends JFrame{
 
 
-		JLabel label1 = new JLabel("Выбрать адрес хозяина собаки по имени ");
+		JLabel label1 = new JLabel("Р’С‹Р±СЂР°С‚СЊ Р°РґСЂРµСЃ С…РѕР·СЏРёРЅР° СЃРѕР±Р°РєРё РїРѕ РёРјРµРЅРё ");
 		public JTextField aadrf = new JTextField("");
 		
 		
-		public JButton btnAdr = new JButton("Продолжить");
+		public JButton btnAdr = new JButton("РџСЂРѕРґРѕР»Р¶РёС‚СЊ");
 		
 	 
 		public AdressQuery()
@@ -80,10 +80,10 @@ public class AdressQuery extends JFrame{
 					
 					ArrayList<String> arrap  = d.Query("apartment_number", "select * from dogs,owners,adress\r\n"
 							+ "where (dogs.id = owners.dog_id and  adress.id = owners.adress_id and  dogs.name = '"+name +"');");
-					if (arrcity.isEmpty()) JOptionPane.showMessageDialog(null,"нет собак с таким именем!","!!!",JOptionPane.PLAIN_MESSAGE);
+					if (arrcity.isEmpty()) JOptionPane.showMessageDialog(null,"РЅРµС‚ СЃРѕР±Р°Рє СЃ С‚Р°РєРёРј РёРјРµРЅРµРј!","!!!",JOptionPane.PLAIN_MESSAGE);
 					
-					String adress = arrcity.get(0) + ", улица " + arrstreet.get(0) + ", дом  "+ arrhouse.get(0) +", квартира  "+ arrap.get(0);
-					JOptionPane.showMessageDialog(null,adress,"адрес хозяина собаки собаки " + name +':',JOptionPane.PLAIN_MESSAGE);
+					String adress = arrcity.get(0) + ", СѓР»РёС†Р° " + arrstreet.get(0) + ", РґРѕРј  "+ arrhouse.get(0) +", РєРІР°СЂС‚РёСЂР°  "+ arrap.get(0);
+					JOptionPane.showMessageDialog(null,adress,"Р°РґСЂРµСЃ С…РѕР·СЏРёРЅР° СЃРѕР±Р°РєРё СЃРѕР±Р°РєРё " + name +':',JOptionPane.PLAIN_MESSAGE);
 				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
